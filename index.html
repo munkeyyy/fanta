@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="nav">
+        <p>Home</p>
+        <ul>
+          <li>About</li>
+          <li>Career</li>
+          <li>Contact</li>
+        </ul>
+        <i class="ri-menu-3-line" style="color: white; font-size: 18px"></i>
+      </div>
+      <div class="cont cont-1" id="cont-1">
+        <h1 class="text">Fanta</h1>
+        <img src="orange-slice.png" id="slice" alt="" />
+        <img src="fanta.png" id="fanta" alt="" />
+        <img src="fresh-orange-free-png.webp" id="oranges" alt="" />
+        <img src="leaf-removebg-preview.png" id="leaf" alt="" />
+        <img src="leaf-removebg-preview.png" id="leaf2" alt="" />
+      </div>
+      <div class="cont cont-2">
+        <div class="left">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill="#e74056"
+              d="M26.1,-30.6C36.9,-28.1,50.7,-24.6,58.1,-15.6C65.5,-6.7,66.4,7.6,59.5,16.4C52.5,25.1,37.8,28.4,26.6,33.2C15.4,37.9,7.7,44.1,-4.3,50C-16.3,56,-32.7,61.7,-43.9,57C-55.2,52.3,-61.4,37.1,-66,21.7C-70.7,6.3,-73.9,-9.4,-69.6,-22.7C-65.4,-36,-53.7,-46.9,-40.9,-48.7C-28,-50.5,-14,-43.2,-3.2,-38.8C7.7,-34.4,15.3,-33.1,26.1,-30.6Z"
+              transform="translate(100 100)"
+            />
+          </svg>
+        </div>
+        <div class="right">
+          <h1>Flavour Updated</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sit
+            commodi eos aspernatur, eum ex pariatur! Nam magnam minus commodi
+            adipisci quas nobis officiis, modi at! Autem cumque exercitationem
+            maiores voluptas harum quo fugiat aperiam repellendus accusantium
+            commodi ducimus sequi tenetur odit eum temporibus earum, molestias
+            odio sapiente voluptatibus. Reiciendis expedita tempora ratione sed
+            voluptas soluta illo officiis corrupti accusantium dignissimos, sunt
+            aliquam voluptate architecto pariatur atque temporibus quaerat!
+            Voluptate neque accusantium libero nesciunt vitae a minima quis
+            repudiandae dolor quibusdam explicabo, odit eaque? Incidunt sit
+            eligendi, itaque ducimus quaerat quae maxime, sapiente deleniti
+            accusamus, tenetur distinctio laborum! Nemo, animi?
+          </p>
+        </div>
+      </div>
+      <div class="cont cont-3">
+        <div class="card">
+          <img src="coke-removebg-preview.png" id="coke" alt="" />
+          <h1>coke</h1>
+          <button>buy now</button>
+        </div>
+        <div class="card">
+          <h1>Fanta</h1>
+          <button>buy now</button>
+        </div>
+        <div class="card">
+          <img src="pepsi-removebg-preview.png" id="pepsi" alt="" />
+          <h1>pepsi</h1>
+          <button>buy now</button>
+        </div>
+      </div>
+    </div>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+    integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+    <script>
+      var tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".cont-2",
+          start: "0% 90%",
+          end: "50% 50%",
+          scrub: true,
+        //   markers: true,
+        },
+      });
+
+      
+
+      tl.to("#fanta", {
+        top: "120%",
+        left: "0%",
+      },"a");
+
+      tl.to("#slice",{
+        top: "160%",
+        left: "20%",
+        // delay:0.2,
+      },"a")
+
+      tl.to("#oranges",{
+        top:"168%",
+        right:"8%",
+        width:"15%",
+        // delay:0.2,
+      },"a")
+      tl.to("#leaf",{
+        top:"100%",
+        rotate:"200deg",
+        left:"82%",
+        width:"12%"
+        // delay:0.2,
+      },"a")
+      tl.to("#leaf2",{
+        top:"100%",
+        rotate:"90deg",
+        left:"5%",
+        // width:"12%"
+        // delay:0.2,
+      },"a")
+
+
+      var tl2 = gsap.timeline({
+        scrollTrigger: {
+          trigger:".cont-3",
+          start:"0% 95%",
+          end: "20% 50%",
+          scrub: true,
+        //   markers: true,
+        },
+      });
+
+      tl2.from("#coke",{
+        left:"100%",
+        top:"110%",
+        rotate:"90deg"
+
+      },"sa")
+      tl2.from("#pepsi",{
+        left:"100%",
+        top:"110%",
+        rotate:"-90deg"
+
+      },"sa")
+    tl2.to("#fanta",{
+        top:"215%",
+        width:"32%",
+        left:"33%"
+    },"sa")
+    tl2.to("#slice",{
+        top:"215%",
+        width:"12%",
+        left:"48%"
+    },"sa")
+
+    </script>
+
+  </body>
+</html>
